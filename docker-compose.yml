@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  web:
+    image: addlog:php-5.4
+    container_name: addlog
+    ports:
+      - 88:80
+    volumes:
+      - /html:/var/www/html
+    restart: always
+    networks:
+      - web_network
+  
+  db:
+    image: mariadb:10.5
+    container_name: db
+    ports:
+      - 3306:3306
+    restart: always
+    networks:
+      - web_network
+    environment:
+      - MYSQL_ROOT_PASSWORD=@Abcd1234
+      - MYSQL_DATABASE=SmartDetectdb
+      - MYSQL_USER=Admin
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ALLOW_REMOTE_ROOT=yes
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    restart: always
+    networks:
+      - web_network
+    volumes:
+      - /mosquitto/config:/mosquitto/config
+      - /mosquitto/data:/mosquitto/data
+      - /mosquitto/log:/mosquitto/log
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+networks:
+  web_network:
+    name: web-network
+    driver: bridge

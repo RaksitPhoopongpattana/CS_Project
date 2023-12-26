@@ -1,0 +1,123 @@
+/* In your CSS file or styled-components */
+.table-container {
+    max-width: 600px;
+    /* Set a maximum width for the container */
+    margin: 0 auto;
+    /* Center the container horizontally */
+    overflow: auto;
+    /* Enable horizontal and vertical scrolling */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    /* Stick the header to the top of the container */
+    background-color: #f0f0f0;
+    /* Header background color */
+    z-index: 1;
+    /* Ensure the header is on top of the table content */
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Add media query for smaller screens if needed */
+
+@media (max-width: 768px) {
+
+    th,
+    td {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+}
+
+/* In your CSS file or styled-components */
+
+.pump-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fbf9cb;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.pump-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pump-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Add more styling as needed */
+/* In your CSS file or styled-components */
+.info-box {
+    border: 2px solid #007bff;
+    /* เปลี่ยนสีขอบตามที่คุณต้องการ */
+    border-radius: 10px;
+    /* ปรับขนาดขอบกรอบ */
+    padding: 10px;
+    /* ระยะห่างระหว่างข้อความและขอบ */
+    margin: 10px;
+    /* ระยะห่างขอบกรอบระหว่างกัน */
+    background-color: #fbf9cb;
+    /* เปลี่ยนสีพื้นหลังของกรอบตามที่คุณต้องการ */
+    text-align: center;
+    width: 200px;
+}
+
+.info-title {
+    font-weight: bold;
+    /* ทำให้ข้อความ "ค่า EC" และ "ค่า PH" หนาขึ้น */
+    margin-bottom: 10px;
+    /* ระยะห่างด้านล่างของ "ค่า EC" และ "ค่า PH" */
+}
+
+.info-value {
+    font-size: 24px;
+    /* เปลี่ยนขนาดตัวอักษรของค่าที่วัดได้ */
+    color: white;
+    background-color: aqua;
+    /* เปลี่ยนสีของค่าที่วัดได้ */
+    text-align: center;
+    /* Center the text inside the input */
+    width: 100%;
+    border-radius: 10px;
+    /* height: 30px; */
+}
+
+.input-value {
+    font-size: 24px;
+    /* เปลี่ยนขนาดตัวอักษรของค่าที่วัดได้ */
+    color: white;
+    background-color: aqua;
+    /* เปลี่ยนสีของค่าที่วัดได้ */
+    text-align: center;
+    /* Center the text inside the input */
+    width: 85%;
+    border-radius: 10px;
+    /* height: 30px; */
+}
+
+.sky {
+    background-color: sky;
+}

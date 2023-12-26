@@ -1,0 +1,13 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97.5vh;
+    /* Optionally, set a minimum height to fill the viewport. */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,9 @@
+docker build -t smartdetect:php-5.4 .
+docker save -o addlog.tar addlog:php-5.4
+docker load -i webrm.
+
+docker run -d -p "80:80" --name php54 smartdetect:php-5.4
+
+docker-compose up --force-recreate
+
+docker-compose exec mosquitto mosquitto_passwd -c /mosquitto/config/passwd <username> //edit password mqtt

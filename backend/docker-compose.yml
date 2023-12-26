@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  backend:
+    image: backend:v1
+    restart: always
+    networks:
+      - web_network
+    ports:
+      - 3001:3001
+
+networks:
+  web_network:
